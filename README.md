@@ -1,7 +1,7 @@
 # GymPose: Automatic Gymnastics Pose Estimation & Scoring
 
 > **Vision-Based Technical Motion Analysis for Competitive Aerobics**  
-> *重庆交通大学*  
+> *Chongqing Jiaotong University*  
 > 2024.11 – 2026.05
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
@@ -12,7 +12,7 @@
 
 ## Project Background
 
-This project is part of **重庆交通大学** innovation and entrepreneurship training program. It addresses the long-standing subjectivity and inconsistency in competitive aerobics judging by introducing an objective, vision-based automatic scoring pipeline.
+This project is part of the innovation and entrepreneurship training program at **Chongqing Jiaotong University**. It addresses the long-standing subjectivity and inconsistency in competitive aerobics judging by introducing an objective, vision-based automatic scoring pipeline.
 
 We leverage **YOLOv8-Pose** for 17-keypoint human pose estimation on three core aerobics jumping maneuvers — **Tuck Jump** (团身跳), **Pike Straddle Jump** (屈体分腿跳), and **Split Leap** (纵劈腿跳) — and combine kinematic feature extraction (joint angles, buffer amplitude, symmetry, etc.) with an **Entropy-Weight TOPSIS** dual-ideal-solution algorithm to produce objective scores in the [8.0, 10.0] range.
 
