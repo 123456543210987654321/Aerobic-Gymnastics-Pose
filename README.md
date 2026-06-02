@@ -285,7 +285,7 @@ We use **YOLOv8n-Pose** as the baseline, outputting 17 COCO-format human keypoin
 
 **Institution**: Chongqing Jiaotong University
 
-**Contributed by**: [123456543210987654321]([https://github.com/user1](https://github.com/123456543210987654321/),
+**Contributed by**: [@123456543210987654321](https://github.com/123456543210987654321),
 
 ---
 
