@@ -191,9 +191,9 @@ python 05_angle_charts.py        # Joint angle academic charts
 
 > The Entropy-Weight TOPSIS scores show **highly significant positive correlation** with expert judge scores.
 
-![Correlation Scatter](figures/1_相关性散点图.png)
+![Correlation Scatter](figures/1_correlation_scatter.png)
 
-![Ranking Consistency](figures/6_排序一致性图.png)
+![Ranking Consistency](figures/6_ranking_consistency.png)
 
 ### Training Configuration
 
@@ -253,17 +253,17 @@ We use **YOLOv8n-Pose** as the baseline, outputting 17 COCO-format human keypoin
 
 | Tuck Jump | Pike Straddle Jump | Split Leap |
 |:---------:|:------------------:|:----------:|
-| ![Tuck Jump](figures/3_团身跳_相关性热力图.png) | ![Pike Straddle](figures/3_屈体分腿跳_相关性热力图.png) | ![Split Leap](figures/3_纵劈腿跳_相关性热力图.png) |
+| ![Tuck Jump](figures/3_tuck_jump_correlation_heatmap.png) | ![Pike Straddle](figures/3_pike_straddle_correlation_heatmap.png) | ![Split Leap](figures/3_split_leap_correlation_heatmap.png) |
 
 ### Joint Angle Analysis
 
-![Knee Angle Density](figures/2_膝关节角度密度图.png)
+![Knee Angle Density](figures/2_knee_angle_density.png)
 
-![3-Joint Pairwise Distribution](figures/5_三关节两两联合分布.png)
+![3-Joint Pairwise Distribution](figures/5_3joint_pairwise_distribution.png)
 
 ### Per-Sample Score Comparison
 
-![Per-Sample Comparison](figures/2_逐样本对比图.png)
+![Per-Sample Comparison](figures/2_per_sample_comparison.png)
 
 ---
 

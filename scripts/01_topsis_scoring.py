@@ -214,7 +214,7 @@ def main():
                 continue
 
     df = pd.DataFrame(data)
-    df.to_csv(f"{SAVE_DIR}/关节角度.csv", index=False, encoding="utf-8-sig")
+    df.to_csv(f"{SAVE_DIR}/joint_angles.csv", index=False, encoding="utf-8-sig")
 
     metrics_list = []
     for action in df["动作"].unique():
@@ -225,7 +225,7 @@ def main():
                 metrics_list.append({"动作": action, "人员ID": pid, **met})
 
     df_metrics = pd.DataFrame(metrics_list)
-    df_metrics.to_csv(f"{SAVE_DIR}/评价指标.csv", index=False, encoding="utf-8-sig")
+    df_metrics.to_csv(f"{SAVE_DIR}/evaluation_metrics.csv", index=False, encoding="utf-8-sig")
 
     # 输出 X_best 和 a,b 区间
     print("\n各指标 X_best 与区间 [a,b] 输出：")
@@ -242,7 +242,7 @@ def main():
 
     if all_scores:
         final = pd.concat(all_scores, ignore_index=True)
-        final.to_csv(f"{SAVE_DIR}/最终评分结果.csv", index=False, encoding="utf-8-sig")
+        final.to_csv(f"{SAVE_DIR}/final_scores.csv", index=False, encoding="utf-8-sig")
         print("\nTOPSIS 得分结果：")
         print(final[["动作", "人员ID", "得分", "排名"]].to_string(index=False))
 

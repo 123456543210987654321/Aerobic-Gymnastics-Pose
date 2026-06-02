@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 
 # 1. 文件路径
 # 输入：TOPSIS评分结果文件（含"熵权Topsis得分"和"评委评分"列）
-file_path = "../outputs/最终评分结果_带评委评分.csv"
+file_path = "../outputs/final_scores_with_judges.csv"
 topsis_col = "熵权Topsis得分"
 score_col = "评委评分"
 
@@ -85,7 +85,7 @@ plt.title('模型评分与评委评分相关性', fontsize=12, pad=10)
 plt.legend(fontsize=10, frameon=False)
 plt.grid(alpha=0.2, linestyle='--')
 plt.tight_layout()
-plt.savefig("../figures/1_相关性散点图.png", bbox_inches='tight')
+plt.savefig("../figures/1_correlation_scatter.png", bbox_inches='tight')
 plt.close()
 
 # 图2：逐样本评分对比折线图
@@ -99,7 +99,7 @@ plt.title('两种评分方法逐样本对比', fontsize=12, pad=10)
 plt.legend(fontsize=10, frameon=False)
 plt.grid(alpha=0.2, linestyle='--')
 plt.tight_layout()
-plt.savefig("../figures/2_逐样本对比图.png", bbox_inches='tight')
+plt.savefig("../figures/2_per_sample_comparison.png", bbox_inches='tight')
 plt.close()
 
 # 图3：评分分布箱线图
@@ -115,7 +115,7 @@ plt.ylabel('分数分布', fontsize=11)
 plt.title('两种评分分布对比', fontsize=12, pad=10)
 plt.grid(alpha=0.2, linestyle='--', axis='y')
 plt.tight_layout()
-plt.savefig("../figures/3_箱线分布图.png", bbox_inches='tight')
+plt.savefig("../figures/3_boxplot_distribution.png", bbox_inches='tight')
 plt.close()
 
 # 图4：评分分布密度曲线
@@ -128,7 +128,7 @@ plt.title('评分分布密度曲线', fontsize=12, pad=10)
 plt.legend(fontsize=10, frameon=False)
 plt.grid(alpha=0.2, linestyle='--')
 plt.tight_layout()
-plt.savefig("../figures/4_密度分布图.png", bbox_inches='tight')
+plt.savefig("../figures/4_density_distribution.png", bbox_inches='tight')
 plt.close()
 
 # 图5：绝对误差分布直方图
@@ -139,7 +139,7 @@ plt.ylabel('频数', fontsize=11)
 plt.title('评分绝对误差分布', fontsize=12, pad=10)
 plt.grid(alpha=0.2, linestyle='--', axis='y')
 plt.tight_layout()
-plt.savefig("../figures/5_误差分布图.png", bbox_inches='tight')
+plt.savefig("../figures/5_error_distribution.png", bbox_inches='tight')
 plt.close()
 
 # 图6：排序后评分对比图
@@ -154,7 +154,7 @@ plt.title('排序后评分一致性对比', fontsize=12, pad=10)
 plt.legend(fontsize=10, frameon=False)
 plt.grid(alpha=0.2, linestyle='--')
 plt.tight_layout()
-plt.savefig("../figures/6_排序一致性图.png", bbox_inches='tight')
+plt.savefig("../figures/6_ranking_consistency.png", bbox_inches='tight')
 plt.close()
 
 # 8. 最终分析结论

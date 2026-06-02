@@ -6,7 +6,7 @@ import seaborn as sns
 
 # 路径配置
 # 请修改为你的输入数据路径 / Change to your data paths
-DATA_PATH = '../outputs/健美操关节角度_完整版.csv'
+DATA_PATH = '../outputs/gymnastics_joint_angles_full.csv'
 SAVE_DIR = '../figures'
 os.makedirs(SAVE_DIR, exist_ok=True)
 
@@ -82,12 +82,13 @@ def compute_metrics(group):
 
 # 计算所有人员的评价指标
 metrics_df = df.groupby(['动作', '人员ID']).apply(compute_metrics).reset_index()
-metrics_df.to_csv(os.path.join(SAVE_DIR, '动作评价指标.csv'), index=False, encoding='utf-8-sig')
-print("评价指标计算完成，已保存到 {}".format(os.path.join(SAVE_DIR, '动作评价指标.csv')))
+metrics_df.to_csv(os.path.join(SAVE_DIR, 'action_evaluation_metrics.csv'), index=False, encoding='utf-8-sig')
+print("评价指标计算完成，已保存到 {}".format(os.path.join(SAVE_DIR, 'action_evaluation_metrics.csv')))
 
 
 # 图1：分动作绘制关节角度相关性热力图
 action_list = ['团身跳', '屈体分腿跳', '纵劈腿跳']
+action_en = {'团身跳': 'tuck_jump', '屈体分腿跳': 'pike_straddle', '纵劈腿跳': 'split_leap'}
 
 for action in action_list:
     df_action = df[df['动作'] == action].copy()
@@ -112,7 +113,7 @@ for action in action_list:
     plt.yticks(fontsize=10)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(SAVE_DIR, f'3_{action}_相关性热力图.png'), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(SAVE_DIR, f'3_{action_en[action]}_correlation_heatmap.png'), dpi=300, bbox_inches='tight')
     plt.close()
 
 # 图2：缓冲幅度与缓冲时长散点图（团身跳膝关节示例）
@@ -128,7 +129,7 @@ if '团身跳' in metrics_df['动作'].values:
     plt.ylabel('缓冲幅度 (deg)')
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig(os.path.join(SAVE_DIR, '5_团身跳膝关节缓冲特征散点图.png'), bbox_inches='tight')
+    plt.savefig(os.path.join(SAVE_DIR, '5_tuck_jump_knee_buffer_scatter.png'), bbox_inches='tight')
     plt.close()
 
 # 图3：角度标准差对比（稳定性）
@@ -141,7 +142,7 @@ plt.ylabel('角度标准差 (deg)')
 plt.xticks(rotation=15)
 plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
-plt.savefig(os.path.join(SAVE_DIR, '6_关节角度标准差对比图.png'), bbox_inches='tight')
+plt.savefig(os.path.join(SAVE_DIR, '6_joint_angle_std_comparison.png'), bbox_inches='tight')
 plt.close()
 
 # 图4：分腿角度密度分布
@@ -156,7 +157,7 @@ if '纵劈腿跳' in df['动作'].values:
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(os.path.join(SAVE_DIR, '7_分腿角度密度分布.png'), bbox_inches='tight')
+    plt.savefig(os.path.join(SAVE_DIR, '7_split_angle_density.png'), bbox_inches='tight')
     plt.close()
 
 print(f"所有图表已生成，保存路径：{SAVE_DIR}")

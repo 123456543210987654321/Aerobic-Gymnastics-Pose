@@ -3,9 +3,9 @@ import os
 
 # 路径配置
 # 请修改为你的输入/输出文件路径 / Change to your file paths
-score_file = r"../outputs/评委评分数据.xlsx"
-result_file = r"../outputs/最终评分结果.csv"
-output_file = r"../outputs/最终评分结果_带评委评分.csv"
+score_file = r"../outputs/judge_scores.xlsx"
+result_file = r"../outputs/final_scores.csv"
+output_file = r"../outputs/final_scores_with_judges.csv"
 
 # 读取评分表（Excel）
 print("正在读取评分数据...")
