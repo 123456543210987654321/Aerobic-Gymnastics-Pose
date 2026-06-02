@@ -171,13 +171,13 @@ python 05_angle_charts.py        # Joint angle academic charts
 
 > *Note:* The validation set contains more occlusion/motion-blur hard cases, yielding stricter metrics. Test set performance approaches practical deployment levels.
 
-![Training Curves](outputs/training_curves.png)
+![Training Curves](figures/training_curves.png)
 
-![Confusion Matrix](runs/confusion_matrix_normalized.png)
+![Confusion Matrix](figures/confusion_matrix.png)
 
 ### Qualitative Detection Examples
 
-![Prediction Batch](runs/val_batch0_pred.jpg)
+![Prediction Batch](figures/detection_example.jpg)
 
 > *Batch prediction result showing 17-keypoint skeletons overlaid on validation images.*
 
