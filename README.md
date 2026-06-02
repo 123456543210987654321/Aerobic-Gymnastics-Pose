@@ -55,7 +55,13 @@ GymPose/
 │   └── final_scores_with_judges.csv  #   Merged with human-judge scores
 │
 ├── figures/                      # Academic-paper figures
-│   └── (8 figures: correlation scatter / heatmaps / ranking consistency, etc.)
+│   ├── training_results_total.png     #   Comprehensive training curves (6-in-1)
+│   ├── confusion_matrix.png           #   Confusion matrix
+│   ├── confusion_matrix_normalized.png #   Normalized confusion matrix
+│   ├── detection_example.jpg          #   Detection examples
+│   ├── val_batch0_pred.jpg            #   Validation batch 0 predictions
+│   ├── val_batch1_pred.jpg            #   Validation batch 1 predictions
+│   └── (scoring analysis figures)
 │
 └── runs/                         # Training run outputs (gitignored)
     ├── eval/                     #   Standard evaluation (val / test)
@@ -170,13 +176,19 @@ python 05_angle_charts.py        # Joint angle academic charts
 
 > *Note:* The validation set contains more occlusion/motion-blur hard cases, yielding stricter metrics. Test set performance approaches practical deployment levels.
 
-![Training Curves](figures/training_curves.png)
+![Training Results](figures/training_results_total.png)
 
 ![Confusion Matrix](figures/confusion_matrix.png)
+
+![Normalized Confusion Matrix](figures/confusion_matrix_normalized.png)
 
 ### Qualitative Detection Examples
 
 ![Prediction Batch](figures/detection_example.jpg)
+
+![Val Batch 0](figures/val_batch0_pred.jpg)
+
+![Val Batch 1](figures/val_batch1_pred.jpg)
 
 > *Batch prediction result showing 17-keypoint skeletons overlaid on validation images.*
 
