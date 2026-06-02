@@ -55,17 +55,21 @@ GymPose/
 │   └── final_scores_with_judges.csv  #   Merged with human-judge scores
 │
 ├── figures/                      # Academic-paper figures
-│   ├── training_results_total.png     #   Comprehensive training curves (6-in-1)
-│   ├── confusion_matrix.png           #   Confusion matrix
-│   ├── confusion_matrix_normalized.png #   Normalized confusion matrix
-│   ├── detection_example.jpg          #   Detection examples
-│   ├── val_batch0_pred.jpg            #   Validation batch 0 predictions
-│   ├── val_batch1_pred.jpg            #   Validation batch 1 predictions
+│   ├── training_results_total.png    #   Comprehensive training curves (6-in-1)
+│   ├── confusion_matrix*.png         #   Confusion matrices (standard + normalized)
+│   ├── test_confusion_matrix*.png    #   Test set confusion matrices
+│   ├── detection_example.jpg         #   Detection examples
+│   ├── val_batch*_pred.jpg           #   Validation batch predictions
+│   ├── test_batch*_pred.jpg          #   Test batch predictions
+│   ├── hardcases_*.jpg               #   Hard-case mining examples
+│   ├── opt_threshold_table.png       #   Threshold optimization table
 │   └── (scoring analysis figures)
 │
 └── runs/                         # Training run outputs (gitignored)
-    ├── eval/                     #   Standard evaluation (val / test)
-    └── focus_eval/               #   Per-image evaluation results
+    ├── eval/
+    │   ├── test_conf025_iou070/  #   Test set evaluation
+    │   └── val_conf025_iou070/   #   Validation set evaluation
+    └── opt_figures/              #   Optimization & hard-case analysis
 ```
 
 ---
@@ -178,19 +182,35 @@ python 05_angle_charts.py        # Joint angle academic charts
 
 ![Training Results](figures/training_results_total.png)
 
-![Confusion Matrix](figures/confusion_matrix.png)
+![Confusion Matrix (Validation)](figures/confusion_matrix.png)
 
-![Normalized Confusion Matrix](figures/confusion_matrix_normalized.png)
+![Confusion Matrix (Test)](figures/test_confusion_matrix.png)
 
 ### Qualitative Detection Examples
 
-![Prediction Batch](figures/detection_example.jpg)
+**Validation Set:**
 
-![Val Batch 0](figures/val_batch0_pred.jpg)
+![Val Batch Sample](figures/detection_example.jpg)
 
-![Val Batch 1](figures/val_batch1_pred.jpg)
+**Test Set:**
 
-> *Batch prediction result showing 17-keypoint skeletons overlaid on validation images.*
+![Test Batch 0](figures/test_batch0_pred.jpg)
+
+![Test Batch 1](figures/test_batch1_pred.jpg)
+
+![Test Batch 2](figures/test_batch2_pred.jpg)
+
+> *17-keypoint skeleton predictions on test set. Test set (8.0–10.0 level) shows cleaner poses and higher detection confidence compared to validation set (5.0–7.5 level) which contains more occlusion and motion blur.*
+
+### Hard-Case Analysis
+
+| Tuck Jump | Pike Straddle Jump | Split Leap |
+|:---------:|:------------------:|:----------:|
+| ![Tuck Jump Hardcases](figures/hardcases_tuck_jump.jpg) | ![Pike Straddle Hardcases](figures/hardcases_pike_straddle.jpg) | ![Split Leap Hardcases](figures/hardcases_split_leap.jpg) |
+
+![Threshold Optimization](figures/opt_threshold_table.png)
+
+> *Hard-case mining identifies low-confidence samples (occlusion, motion blur, extreme poses). Threshold optimization balances detection recall vs. false positives.*
 
 ### Scoring Consistency with Human Judges
 
