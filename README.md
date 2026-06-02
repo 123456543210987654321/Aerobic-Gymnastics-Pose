@@ -4,9 +4,9 @@
 > *Chongqing Jiaotong University*  
 > 2024.11 – 2026.05
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![Ultralytics](https://img.shields.io/badge/YOLOv8-Pose-0b9fef.svg)](https://github.com/ultralytics/ultralytics)
+[![Python]()](https://www.python.org/)
+[![PyTorch]()](https://pytorch.org/)
+[![Ultralytics]()](https://github.com/ultralytics/ultralytics)
 
 ---
 
@@ -285,7 +285,7 @@ We use **YOLOv8n-Pose** as the baseline, outputting 17 COCO-format human keypoin
 
 **Institution**: Chongqing Jiaotong University
 
-**Contributed by**: [@123456543210987654321](https://github.com/123456543210987654321),[@Nolkee](https://github.com/Nolkee),
+**Contributed by**: [@123456543210987654321](https://github.com/123456543210987654321),[@Nolkee](https://github.com/Nolkee)
 
 ---
 
