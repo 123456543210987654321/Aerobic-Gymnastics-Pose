@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Model files (large, use Git LFS or external storage)
+best.pt
+last.pt
+yolov8n-pose.pt
+best.onnx
+*.onnx
+
+# YOLO training outputs (large binary files)
+runs/
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# Private documents (contains personal info: student IDs, phone numbers, emails)
+*结题报告*.pdf
+weights/
+checkpoints/
+runs/
+outputs/
+datasets/
+yolov8n-pose.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx

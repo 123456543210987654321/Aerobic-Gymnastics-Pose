@@ -1,0 +1,24 @@
+# Core deep learning framework
+torch>=2.0.0
+ultralytics>=8.1.0
+
+# Data processing & analysis
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+openpyxl>=3.1.0
+
+# Computer vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# PPT/Report generation
+python-pptx>=0.6.21
+
+# ONNX export (optional, for model deployment)
+onnx>=1.14.0
+onnxruntime>=1.15.0
