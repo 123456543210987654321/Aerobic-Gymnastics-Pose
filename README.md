@@ -45,7 +45,7 @@ GymPose/
 │   ├── 01_topsis_scoring.py      #   Label parsing → joint angles → TOPSIS scoring
 │   ├── 02_merge_scores.py        #   Merge human-judge scores with TOPSIS results
 │   ├── 03_visualize_results.py   #   Correlation / error / distribution visualizations
-│   └── 05_angle_charts.py        #   Joint angle academic charts (heatmaps / density)
+│   └── 04_angle_charts.py        #   Joint angle academic charts (heatmaps / density)
 │
 ├── outputs/                      # Output data
 │   ├── training_results.csv      #   Raw training metrics
@@ -171,7 +171,7 @@ cd scripts
 python 01_topsis_scoring.py      # Joint angles → TOPSIS scoring
 python 02_merge_scores.py        # Merge human-judge scores
 python 03_visualize_results.py   # Scoring comparison visualizations
-python 05_angle_charts.py        # Joint angle academic charts
+python 04_angle_charts.py        # Joint angle academic charts
 ```
 
 ---
