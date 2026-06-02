@@ -173,6 +173,14 @@ python 05_angle_charts.py        # Joint angle academic charts
 
 ![Training Curves](outputs/training_curves.png)
 
+![Confusion Matrix](runs/confusion_matrix_normalized.png)
+
+### Qualitative Detection Examples
+
+![Prediction Batch](runs/val_batch0_pred.jpg)
+
+> *Batch prediction result showing 17-keypoint skeletons overlaid on validation images.*
+
 ### Scoring Consistency with Human Judges
 
 | Method | Coefficient | Significance |
