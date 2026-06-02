@@ -58,6 +58,7 @@ GymPose/
 │   ├── training_results_total.png    #   Comprehensive training curves (6-in-1)
 │   ├── confusion_matrix*.png         #   Confusion matrices (standard + normalized)
 │   ├── test_confusion_matrix*.png    #   Test set confusion matrices
+│   ├── scenario_*.jpg                #   Multi-scenario training samples (dim/bright/varying)
 │   ├── detection_example.jpg         #   Detection examples
 │   ├── val_batch*_pred.jpg           #   Validation batch predictions
 │   ├── test_batch*_pred.jpg          #   Test batch predictions
@@ -89,6 +90,14 @@ GymPose/
 - Annotation format: YOLO Pose (`kpt_shape=[17, 3]`, COCO 17-keypoint)
 - Split strategy: **athlete-based partitioning** to prevent intra-subject leakage
 - Scene conditions: indoor gym with 3 lighting scenarios (dim / bright / varying + partial occlusion)
+
+### Multi-Scenario Samples
+
+| Dim Lighting | Bright Lighting | Varying + Occlusion |
+|:------------:|:---------------:|:-------------------:|
+| ![Dim](figures/scenario_dim.jpg) | ![Bright](figures/scenario_bright.jpg) | ![Varying](figures/scenario_varying.jpg) |
+
+> *Training batch mosaics from 3 lighting conditions. The dataset covers diverse illumination to ensure robust deployment in real competition venues.*
 
 ### File Naming Convention
 
