@@ -171,6 +171,8 @@ python 05_angle_charts.py        # Joint angle academic charts
 
 > *Note:* The validation set contains more occlusion/motion-blur hard cases, yielding stricter metrics. Test set performance approaches practical deployment levels.
 
+![Training Curves](outputs/training_curves.png)
+
 ### Scoring Consistency with Human Judges
 
 | Method | Coefficient | Significance |
@@ -180,6 +182,10 @@ python 05_angle_charts.py        # Joint angle academic charts
 | Mean Absolute Error | ~0.12 pts | — |
 
 > The Entropy-Weight TOPSIS scores show **highly significant positive correlation** with expert judge scores.
+
+![Correlation Scatter](figures/1_相关性散点图.png)
+
+![Ranking Consistency](figures/6_排序一致性图.png)
 
 ### Training Configuration
 
@@ -223,13 +229,11 @@ We use **YOLOv8n-Pose** as the baseline, outputting 17 COCO-format human keypoin
 
 ## Team
 
-| Role | Name | Major | Year |
-|------|------|-------|------|
-| Lead | Jiang Zhuolin (蒋卓霖) | Computer Science & Technology | 2022 |
-| Member | Zhou Yi (周艺) | Statistics | 2023 |
-| Member | Yin Jiabin (殷佳斌) | Computer Science & Technology | 2024 |
-
-**Advisors**: Zhong Meilan (Dept. of Physical Education), Cheng Chongsheng (School of Civil Engineering)
+| Role | Major |
+|------|-------|
+| Project Lead | Computer Science & Technology |
+| Member | Statistics |
+| Member | Computer Science & Technology |
 
 **Institution**: Chongqing Jiaotong University
 
@@ -237,13 +241,33 @@ We use **YOLOv8n-Pose** as the baseline, outputting 17 COCO-format human keypoin
 
 ## About the Author & Research Interests
 
-The lead author is an undergraduate majoring in **Computer Science & Technology**, with additional coursework in statistics and an ongoing interest in embedded hardware. Primary research directions include:
+The project lead is an undergraduate majoring in **Computer Science & Technology**, with additional coursework in statistics and an ongoing interest in embedded hardware. Primary research directions include:
 
 - **Autonomous Agents (LLM/VLM-based Agent systems)**
 - **Spiking Neural Networks (SNN)** — brain-inspired, low-power neural computation
 - **Computer Vision** — pose estimation, action recognition, sports analytics
 
 > 🤝 **Always open to collaboration and peer exchange!** If you work on Agent, SNN, pose estimation, or multi-modal learning, feel free to reach out — issues, PRs, and discussions are warmly welcomed.
+
+---
+
+## Figures Gallery
+
+### Per-Action Correlation Heatmaps
+
+| Tuck Jump | Pike Straddle Jump | Split Leap |
+|:---------:|:------------------:|:----------:|
+| ![Tuck Jump](figures/3_团身跳_相关性热力图.png) | ![Pike Straddle](figures/3_屈体分腿跳_相关性热力图.png) | ![Split Leap](figures/3_纵劈腿跳_相关性热力图.png) |
+
+### Joint Angle Analysis
+
+![Knee Angle Density](figures/2_膝关节角度密度图.png)
+
+![3-Joint Pairwise Distribution](figures/5_三关节两两联合分布.png)
+
+### Per-Sample Score Comparison
+
+![Per-Sample Comparison](figures/2_逐样本对比图.png)
 
 ---
 
