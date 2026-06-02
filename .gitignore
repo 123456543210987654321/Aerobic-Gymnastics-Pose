@@ -46,14 +46,11 @@ Thumbs.db
 ~$*.xls
 
 # Private documents (contains personal info: student IDs, phone numbers, emails)
-*结题报告*.pdf
+*report*.pdf
 weights/
 checkpoints/
-runs/
 outputs/
 datasets/
-yolov8n-pose.pt
 *.pth
 *.ckpt
 *.safetensors
-*.onnx

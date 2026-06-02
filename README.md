@@ -47,10 +47,9 @@ GymPose/
 │   ├── 03_visualize_results.py   #   Correlation / error / distribution visualizations
 │   └── 05_angle_charts.py        #   Joint angle academic charts (heatmaps / density)
 │
-├── outputs/                      # Output data & figures
+├── outputs/                      # Output data
 │   ├── training_results.csv      #   Raw training metrics
-│   ├── training_curves.png       #   Training curve plots
-│   ├── joint_angles_full.csv     #   Full joint angle dataset
+│   ├── gymnastics_joint_angles_full.csv  #   Full joint angle dataset
 │   ├── evaluation_metrics.csv    #   Per-athlete evaluation indicators
 │   ├── final_scores.xlsx         #   TOPSIS scoring results
 │   └── final_scores_with_judges.csv  #   Merged with human-judge scores
