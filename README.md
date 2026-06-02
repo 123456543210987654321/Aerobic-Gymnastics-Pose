@@ -239,18 +239,6 @@ We use **YOLOv8n-Pose** as the baseline, outputting 17 COCO-format human keypoin
 
 ---
 
-## About the Author & Research Interests
-
-The project lead is an undergraduate majoring in **Computer Science & Technology**, with additional coursework in statistics and an ongoing interest in embedded hardware. Primary research directions include:
-
-- **Autonomous Agents (LLM/VLM-based Agent systems)**
-- **Spiking Neural Networks (SNN)** — brain-inspired, low-power neural computation
-- **Computer Vision** — pose estimation, action recognition, sports analytics
-
-> 🤝 **Always open to collaboration and peer exchange!** If you work on Agent, SNN, pose estimation, or multi-modal learning, feel free to reach out — issues, PRs, and discussions are warmly welcomed.
-
----
-
 ## Figures Gallery
 
 ### Per-Action Correlation Heatmaps
